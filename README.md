@@ -15,34 +15,34 @@ This portfolio is designed to present my technical skills, selected projects, an
 
 ✨ Features
 
-Responsive design
-Modern developer-focused UI
-Hero / introduction section
-About section
-Skills showcase
-Featured projects section
-Project live demos
-GitHub project links
-Contact section
-Social links
-CV download
-Mobile-friendly layout
+- Responsive design
+- Modern developer-focused UI
+- Hero / introduction section
+- About section
+- Skills showcase
+- Featured projects section
+- Project live demos
+- GitHub project links
+- Contact section
+- Social links
+- CV download
+- Mobile-friendly layout
 
 
 🛠️ Technologies
 
-HTML5
-CSS3
-JavaScript
-TypeScript
-React.js
-Next.js
-PHP
-Laravel
-Node.js
-Express.js
-Python
-MySQL / SQL
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
+- React.js
+- Next.js
+- PHP
+- Laravel
+- Node.js
+- Express.js
+- Python
+- MySQL / SQL
 
 
 📂 Portfolio Sections
@@ -69,7 +69,7 @@ Contact information and social links for professional opportunities and collabor
 
 A language translator web application that allows users to translate text between multiple languages.
 
-Tech Stack:
+- Tech Stack:
 Python
 HTML
 CSS
@@ -82,7 +82,7 @@ API
 
 A modern dark-themed music player with playlist controls built with vanilla web technologies.
 
-Tech Stack:
+- Tech Stack:
 HTML
 CSS
 JavaScript
