@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft | Loubna Dev - Full-Stack Web Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon (TypeScript, Next.js logos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#07080e',
+                            card: '#0f111a',
+                            border: '#1e2235',
+                            accent: '#6366f1',
+                            purple: '#8b5cf6',
+                            lightPurple: '#a78bfa',
+                            glow: 'rgba(139, 92, 246, 0.15)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        code: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased selection:bg-brand-purple selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card bg-opacity-80 border-b border-white/5 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 text-xl font-bold text-white tracking-wide group">
+                    <span class="text-brand-purple group-hover:scale-110 transition-transform duration-300 font-code">&lt;/&gt;</span>
+                    <span class="tracking-tight">Code<span class="text-brand-purple">Craft</span></span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-brand-purple transition-colors duration-200">Home</a>
+                    <a href="#about" class="hover:text-brand-purple transition-colors duration-200">About</a>
+                    <a href="#skills" class="hover:text-brand-purple transition-colors duration-200">Skills</a>
+                    <a href="#projects" class="hover:text-brand-purple transition-colors duration-200">Projects</a>
+                    <a href="#blog" class="hover:text-brand-purple transition-colors duration-200">Blog</a>
+                    <a href="#contact" class="hover:text-brand-purple transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="purple-gradient-btn px-6 py-2.5 rounded-full text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-purple-500/20">
+                        Hire Me <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-brand-border bg-brand-bg/95 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-brand-purple">Home</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-brand-purple">About</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-brand-purple">Skills</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-brand-purple">Projects</a>
+            <a href="#blog" class="block py-2 text-slate-300 hover:text-brand-purple">Blog</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-brand-purple">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center purple-gradient-btn px-6 py-2.5 rounded-full text-white text-sm font-semibold mt-2">
+                Hire Me ↗
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-24 space-y-24 md:space-y-36">
+
+        <!-- HERO SECTION -->
+        <section id="home" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20">
+            <!-- Background Glow Blur -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+                    <!-- Pill Tag -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-purple/10 border border-brand-purple/30 text-brand-lightPurple text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
+                        I'm a Full-Stack Web Developer
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Hi, I'm <span class="accent-gradient-text">Loubna</span><br>
+                        <span class="text-gradient">I build things for the web.</span>
+                    </h1>
+
+                    <!-- Paragraph -->
+                    <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        I'm a passionate full-stack web developer specializing in building exceptional digital experiences with modern technologies, from responsive front-end interfaces to reliable back-end applications and databases.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#projects" class="purple-gradient-btn px-7 py-3.5 rounded-xl text-white font-medium text-sm flex items-center gap-2 shadow-lg shadow-purple-900/30">
+                            View My Work <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                        <a href="assets/docs/Loubna-CV.pdf" download class="px-7 py-3.5 rounded-xl border border-slate-700 hover:border-brand-purple text-slate-200 hover:text-white text-sm font-medium transition-all duration-300 flex items-center gap-2 bg-brand-card/50 hover:bg-brand-card">
+                            Download CV <i class="fa-solid fa-download text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Icons Row -->
+                    <div class="pt-8 border-t border-slate-800/80 space-y-3">
+                        <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Technologies I Work With</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-slate-300">
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-orange-500/50 hover:text-orange-500 transition-colors" title="HTML5">
+                                <i class="fa-brands fa-html5 text-orange-500 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-blue-500/50 hover:text-blue-500 transition-colors" title="CSS3">
+                                <i class="fa-brands fa-css3-alt text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-yellow-400/50 hover:text-yellow-400 transition-colors" title="JavaScript">
+                                <i class="fa-brands fa-js text-yellow-400 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-blue-400/50 hover:text-blue-400 transition-colors" title="TypeScript">
+                                <i class="devicon-typescript-plain text-blue-400 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-400 transition-colors" title="React">
+                                <i class="fa-brands fa-react text-cyan-400 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-blue-400/50 hover:text-blue-400 transition-colors" title="Next.js">
+                                <i class="devicon-nextjs-plain text-blue-400 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-indigo-300/50 hover:text-indigo-300 transition-colors" title="PHP">
+                                <i class="fa-brands fa-php text-indigo-300 text-xl"></i>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-white/5 flex items-center justify-center hover:border-yellow-300/50 hover:text-yellow-300 transition-colors" title="Python">
+                                <i class="fa-brands fa-python text-yellow-300 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-start relative lg:self-start">
+                    <!-- 1. Cadre: 7ajm l cercle -->
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[26rem] lg:h-[26rem] rounded-full flex items-center justify-center my-4">
+                        <!-- 2. Glow -->
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-accent via-brand-purple to-pink-500 p-1 animate-pulse blur-sm"></div>
+                        <!-- 3. Border + crop -->
+                        <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-brand-purple/50 bg-brand-card">
+                            <!-- 4. Photo + zoom -->
+                            <img src="assets/img/loubna-portrait.jpg" alt="Loubna - Full-Stack Web Developer" class="w-full h-full object-cover object-center scale-[1.4] origin-[50%_10%]">
+                        </div>
+                    </div>
+
+                    <!-- Floating Code Snippet Card -->
+                    <div class="lg:absolute -bottom-12 -right-2 w-full max-w-sm glass-card rounded-2xl p-4 shadow-2xl border border-white/10 font-code text-xs space-y-2 mt-4 lg:mt-0">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                            </div>
+                            <span class="text-slate-500 text-[10px]">&lt;/&gt; Loubna</span>
+                        </div>
+                        <div class="text-slate-300 leading-relaxed pt-1">
+                            <span class="text-purple-400">const</span> <span class="text-yellow-300">developer</span> = {<br>
+                            &nbsp;&nbsp;<span class="text-slate-400">name:</span> <span class="text-green-400">"Loubna"</span>,<br>
+                            &nbsp;&nbsp;<span class="text-slate-400">skills:</span> [<span class="text-green-400">"HTML"</span>, <span class="text-green-400">"CSS"</span>, <span class="text-green-400">"JavaScript"</span>, <span class="text-green-400">"TypeScript"</span>, <span class="text-green-400">"React"</span>, <span class="text-green-400">"Next.js"</span>, <span class="text-green-400">"PHP"</span>, <span class="text-green-400">"PYTHON"</span>],<br>
+                            &nbsp;&nbsp;<span class="text-slate-400">passion:</span> <span class="text-green-400">"Building things for the web"</span><br>
+                            };
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Side Text -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-purple font-semibold tracking-wider text-xs uppercase">About Me</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-snug">
+                        I'm passionate about creating digital solutions
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                        With 2+ years of experience in web development, I help businesses and individuals bring their ideas to life through clean, efficient, and user-friendly code.
+                    </p>
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-brand-purple/40 hover:border-brand-purple bg-brand-purple/10 text-brand-lightPurple hover:text-white font-medium text-sm transition-all duration-300">
+                            Learn More About Me <i class="fa-solid fa-user text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side 2x2 Stats Grid -->
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- Stat 1 -->
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">2+</h3>
+                            <p class="text-xs text-slate-400">Years Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">10+</h3>
+                            <p class="text-xs text-slate-400">Projects Completed</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">10+</h3>
+                            <p class="text-xs text-slate-400">Happy Clients</p>
+                        </div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">100%</h3>
+                            <p class="text-xs text-slate-400">Client Satisfaction</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MY SKILLS SECTION -->
+        <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-brand-purple font-semibold tracking-wider text-xs uppercase">My Skills</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Technologies I Master</h2>
+            </div>
+
+            <!-- Full-stack skills: edit labels and percentages to match your current level -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-html5 text-orange-500 text-xl"></i><span class="text-white font-semibold">HTML</span></div><span class="text-slate-400 text-xs">95%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:95%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-css3-alt text-blue-500 text-xl"></i><span class="text-white font-semibold">CSS</span></div><span class="text-slate-400 text-xs">90%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:90%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-js text-yellow-400 text-xl"></i><span class="text-white font-semibold">JavaScript</span></div><span class="text-slate-400 text-xs">90%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:90%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><span class="font-bold text-blue-400 text-lg">TS</span><span class="text-white font-semibold">TypeScript</span></div><span class="text-slate-400 text-xs">85%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:85%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-react text-cyan-400 text-xl"></i><span class="text-white font-semibold">React.js</span></div><span class="text-slate-400 text-xs">85%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:85%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><span class="font-bold text-white text-lg">N</span><span class="text-white font-semibold">Next.js</span></div><span class="text-slate-400 text-xs">80%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:80%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><span class="font-bold text-indigo-300 text-lg">PHP</span><span class="text-white font-semibold">PHP</span></div><span class="text-slate-400 text-xs">85%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:85%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-laravel text-red-500 text-xl"></i><span class="text-white font-semibold">Laravel</span></div><span class="text-slate-400 text-xs">80%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:80%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-node-js text-green-500 text-xl"></i><span class="text-white font-semibold">Node.js & Express</span></div><span class="text-slate-400 text-xs">80%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:80%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-solid fa-database text-cyan-300 text-xl"></i><span class="text-white font-semibold">MySQL / SQL</span></div><span class="text-slate-400 text-xs">80%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:80%"></div></div></div>
+                <div class="glass-card p-5 rounded-2xl space-y-3"><div class="flex items-center justify-between text-sm font-medium"><div class="flex items-center gap-3"><i class="fa-brands fa-python text-orange-500 text-xl"></i><span class="text-white font-semibold">PYTHON</span></div><span class="text-slate-400 text-xs">90%</span></div><div class="w-full bg-brand-border rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-accent to-brand-purple h-2 rounded-full" style="width:90%"></div></div></div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION -->
+        <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-brand-purple font-semibold tracking-wider text-xs uppercase">Featured Projects</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Some of My Recent Work</h2>
+            </div>
+
+            <!-- Project cards intentionally left empty for Loubna to add it later. -->
+            <!-- Screenshots go in assets/img/projects/ (linguaflow.png , nightshift-music-player.png) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+                <!-- Project 1: LinguaFlow-static -->
+                <article class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:border-brand-purple/60 hover:shadow-2xl hover:shadow-purple-900/30">
+                    <div class="h-44 overflow-hidden bg-brand-card">
+                       <img src="assets/img/projects/linguaflow.png" alt="LinguaFlow - Language Translator" loading="lazy"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">LinguaFlow</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A language translator web app that lets users translate text between multiple languages quickly and easily.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">HTML</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">CSS</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">API</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <a href="https://linguaflow-static.vercel.app/" target="_blank" rel="noopener"
+                               class="purple-gradient-btn px-5 py-2.5 rounded-xl text-white text-sm font-medium flex items-center gap-2">
+                                Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="https://github.com/LoonaLabs/linguaflow-static" target="_blank" rel="noopener"
+                               class="px-5 py-2.5 rounded-xl border border-slate-700 hover:border-brand-purple text-slate-200 hover:text-white text-sm font-medium transition-all duration-300 flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Nightshift Music Player -->
+                <article class="glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:border-brand-purple/60 hover:shadow-2xl hover:shadow-purple-900/30">
+                    <div class="h-44 overflow-hidden bg-brand-card">
+                        <img src="assets/img/projects/nightshift-music-player.png" alt="Nightshift Music Player" loading="lazy"
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Nightshift Music Player</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A modern dark-themed music player with playlist controls, built with vanilla HTML, CSS and JavaScript.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">HTML</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">CSS</span>
+                            <span class="px-3 py-1 rounded-full bg-brand-purple/15 text-brand-lightPurple text-xs font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <a href="https://loonalabs.github.io/Nightshift-Music-Player/" target="_blank" rel="noopener"
+                               class="purple-gradient-btn px-5 py-2.5 rounded-xl text-white text-sm font-medium flex items-center gap-2">
+                                Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="https://github.com/LoonaLabs/nightshift-music-player" target="_blank" rel="noopener"
+                               class="px-5 py-2.5 rounded-xl border border-slate-700 hover:border-brand-purple text-slate-200 hover:text-white text-sm font-medium transition-all duration-300 flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT & FOOTER SECTION -->
+        <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-16">
+
+                <!-- Left Column: Work Together -->
+                <div class="lg:col-span-4 space-y-4">
+                    <span class="text-brand-purple font-semibold tracking-wider text-xs uppercase">Let's Work Together</span>
+                    <h2 class="text-3xl font-bold text-white">Have a project in mind?</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        I'm always open to discussing new projects and opportunities. Let's create something amazing together!
+                    </p>
+                    <div class="pt-2">
+                        <a href="mailto:loubnaelouardi9@gmail.com" class="purple-gradient-btn inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium text-sm shadow-lg shadow-purple-900/30">
+                            Get In Touch <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Column : Follow Me / Contact -->
+                <div class="lg:col-span-5 lg:col-start-8 space-y-5">
+                    <span class="text-xs uppercase tracking-widest text-slate-500 font-semibold block">Follow Me</span>
+
+                    <!-- Social icons -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="https://github.com/LoonaLabs" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"
+                           class="w-11 h-11 rounded-xl bg-brand-card border border-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-purple/60 hover:-translate-y-1 transition-all duration-300">
+                            <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/loubna-el-ouardi-a16bb22a9" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
+                           class="w-11 h-11 rounded-xl bg-brand-card border border-white/5 flex items-center justify-center text-slate-300 hover:text-blue-400 hover:border-blue-400/50 hover:-translate-y-1 transition-all duration-300">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/loon.alab" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
+                           class="w-11 h-11 rounded-xl bg-brand-card border border-white/5 flex items-center justify-center text-slate-300 hover:text-pink-400 hover:border-pink-400/50 hover:-translate-y-1 transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="mailto:loubnaelouardi9@gmail.com" aria-label="Email" title="Email"
+                           class="w-11 h-11 rounded-xl bg-brand-card border border-white/5 flex items-center justify-center text-slate-300 hover:text-brand-lightPurple hover:border-brand-purple/60 hover:-translate-y-1 transition-all duration-300">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </a>
+                        <a href="tel:+212632223755" aria-label="Phone" title="Phone"
+                           class="w-11 h-11 rounded-xl bg-brand-card border border-white/5 flex items-center justify-center text-slate-300 hover:text-green-400 hover:border-green-400/50 hover:-translate-y-1 transition-all duration-300">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </a>
+                    </div>
+
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-brand-purple w-4"></i>
+                            <a href="mailto:loubnaelouardi9@gmail.com" class="hover:text-white transition-colors break-all">loubnaelouardi9@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-purple w-4"></i>
+                            <a href="tel:+212632223755" class="hover:text-white transition-colors">+212 632 223 755</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-brand-purple w-4"></i>
+                            <a href="https://www.instagram.com/loon.alab" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">@LOON.ALAB</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-brand-border/60 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>©️ 2026 Loubna Dev. All rights reserved.</p>
+                <p class="flex items-center gap-1">
+                    Made with <i class="fa-solid fa-heart text-red-500"></i> by Loubna
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
